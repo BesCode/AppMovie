@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+:root{
+    --bgColor: linear-gradient(to right, rgba(53, 0, 0), rgb(0, 0, 17), rgba(53, 0, 0));
+    --textColor:white;
+    --signColor: rgba(53, 0, 0);
+}
+
+body{
+    background: var(--bgColor);
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    height: 100vh;
+    margin: 1rem auto;
+    width: 95%;
+    border: 1px solid white;
+
+    #welcome{
+        background-color:var(--bgColor);
+        height: 50%;
+        text-align: center;
+        padding:5rem 0;
+        color: white;
+        background-image: url(https://media.istockphoto.com/photos/empty-comfortable-red-seats-with-numbers-in-cinema-picture-id504096800?k=20&m=504096800&s=612x612&w=0&h=G4LutrwtQ32gEJr138YLbYQzom9wP1kkgOtSd_wOwbE=);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+
+        h5{
+            padding-bottom: 1rem;
+        }
+
+        h1{
+            font-size: 2.5rem;
+        }
+
+        p{
+            margin-top: 1rem;
+            padding: 0 .5rem;
+        }
+    }
+
+
+    #sign{
+        height: 50%;
+        background-color: var(--textColor);
+        color: var(--signColor);
+        padding: 3rem .5rem;
+
+        h1{
+            font-size: 2.5rem;
+        }
+
+        label{
+            color: black;
+        }
+
+        input{
+            width: 100%;
+            height: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 3px solid var(--signColor);
+            border-top: none;
+            border-bottom: none;
+            border-right: none;
+            background-color: rgb(231, 157, 157) ;
+        }
+
+        h5{
+            color: black;
+            padding-bottom: 1rem;
+        }
+
+        button{
+            background-color: var(--signColor);
+            width: 8rem;
+            height: 1.5rem;
+            border: none;
+            color: white;
+            font-weight: bolder;
+        }
+
+        button:hover{
+            border: 1px solid var(--signColor);
+            background-color: var(--textColor);
+            color: black;
+           
+        }
+    }
+    
+}
+
+@media screen and (min-width:1024px){
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        margin: 3rem auto;
+        
+        #welcome,
+        #sign{
+            width: 50%;
+            height: 100%;
+        }
+
+        
+    }
+}
